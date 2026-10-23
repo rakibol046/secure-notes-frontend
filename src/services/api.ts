@@ -2,6 +2,8 @@
 // The JWT lives only in this module's memory: it is never written to
 // localStorage/sessionStorage/cookies, so a page reload requires a new login.
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/+$/, "");
+
 export type Role = "user" | "admin";
 
 export interface User {
@@ -77,7 +79,7 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
   if (body !== undefined) headers["Content-Type"] = "application/json";
   if (token) headers.Authorization = `Bearer ${token}`;
 
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE_URL}${path}`, {
     method,
     headers,
     body: body === undefined ? undefined : JSON.stringify(body),
