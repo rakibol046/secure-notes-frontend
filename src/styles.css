@@ -1,0 +1,29 @@
+/* Deliberately minimal: readable and functional, nothing more. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #222; background: #f6f6f6; }
+.app { max-width: 960px; margin: 0 auto; padding: 0 16px 32px; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ccc; }
+header h1 { font-size: 1.2rem; margin: 0 12px 0 0; }
+nav, .session, .row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.session { margin-left: auto; }
+.sep { margin-left: 8px; font-size: 0.85rem; color: #666; }
+button { padding: 4px 10px; cursor: pointer; }
+button.active { font-weight: bold; }
+button.link { border: 0; background: none; padding: 0; color: #0645ad; text-decoration: underline; }
+button.danger { color: #b00020; }
+.card { background: #fff; border: 1px solid #ddd; padding: 12px; margin: 12px 0; display: flex; flex-direction: column; gap: 8px; }
+.narrow { max-width: 380px; }
+label { display: flex; flex-direction: column; gap: 4px; }
+input, textarea, select { padding: 6px; font: inherit; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.list { list-style: none; padding: 0; }
+.list li { background: #fff; border: 1px solid #ddd; padding: 8px; margin-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { border: 1px solid #ddd; padding: 6px; text-align: left; vertical-align: top; }
+.pagination { display: flex; align-items: center; gap: 12px; margin: 12px 0; }
+.error { color: #b00020; margin: 0; }
+.notice { color: #1b5e20; margin: 0; }
+.pre { white-space: pre-wrap; }
+dl.card { display: grid; grid-template-columns: max-content 1fr; }
+dt { font-weight: bold; }
+dd { margin: 0; }
